@@ -1,0 +1,8 @@
+<div style= "text-align:center;line-height:100%;padding:10px;">
+    <h2>ConnectAPIの認証結果</h2>
+    <p><%= @state  %></p>
+    <!--CSVインポートボタンを表示-->
+    <%= form_tag import_importcsv_path do %>
+      <input type="submit" value="CSVインポート" class="btn primary-btn">
+    <%end%>
+</div>

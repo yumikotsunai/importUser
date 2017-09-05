@@ -1,0 +1,2 @@
+module AouthsetupHelper
+end

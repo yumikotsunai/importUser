@@ -1,0 +1,6 @@
+<div style= "text-align:center;line-height:100%;padding:10px;">
+  <%= form_tag({controller: "import", action: "action", method: "post"}, {multipart: true}) do %>
+    <%= file_field_tag :csv_file %>
+    <%= submit_tag "CSVファイル読込み" %>
+  <% end %>
+</div>

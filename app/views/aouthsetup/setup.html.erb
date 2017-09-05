@@ -1,0 +1,20 @@
+<div style= "text-align:center;line-height:100%;padding:10px;">
+  <h2>ConnectシステムのAPI認証を行います</h2>
+  <p>以下に、LockState Connectの情報を入力してください</p>
+</div>
+
+<div style= "text-align:center;line-height:100%;padding:50px;">
+  <!--getcode.htmlに送信-->
+  <%= form_tag aouthsetup_getcode_path do %>
+  
+    <p>アカウントメールアドレス</p>
+    <input type="text" class="form-control title-field" name="email" style="width:500px" value="demo@remotelock.com">
+    <p>クライアントID</p>
+    <input type="text" class="form-control title-field" name="clientId" style="width:500px" value="a4b24a461019d48457c7ad108b7e53c9c499cb43206da51936e9dc240f68e45e">
+    <p>シークレット</p>
+    <input type="text" class="form-control title-field" name="clientSecret" style="width:500px" value="668d261cd6c279440cc74aded86ce40c643ef1b1b16608f8782cc213832bdc31">
+    
+    <input type="submit" value="送信" class="btn primary-btn">
+  
+  <%end%>
+</div>

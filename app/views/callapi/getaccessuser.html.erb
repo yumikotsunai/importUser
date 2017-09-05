@@ -1,0 +1,10 @@
+<div style= "text-align:center;line-height:100%;padding:10px;">
+  <h4>以下のユーザーは正しく登録されました</h4>
+    <% @successList.each do |success| %>
+    <%= success %><br>
+  <% end %>
+  <h4>以下のユーザーは正しく登録されませんでした</h4>
+    <% @errorList.each do |error| %>
+    <%= error %><br>
+  <% end %>
+</div>
