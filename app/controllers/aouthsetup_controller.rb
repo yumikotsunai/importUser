@@ -15,10 +15,12 @@ CTX.verify_mode = OpenSSL::SSL::VERIFY_NONE
     @@key = 	params[:email].presence
     @@client =	params[:clientId].presence
     @@secret =	params[:clientSecret].presence
-    @@callbackuri = 'https://import-user-yumikotsunai.c9users.io/aouthsetup/callback'
+    #@@callbackuri = 'https://import-user-yumikotsunai.c9users.io/aouthsetup/callback'
+    @@callbackuri = 'https://importusers.herokuapp.com/aouthsetup/callback'
     
     #connectのoauth認証のためのURLにアクセスする  (A)リソースオーナーにAuthorization Request送信
     req = 'https://connect.lockstate.jp/oauth/'+'authorize?'+'client_id='+@@client+'&response_type=code&redirect_uri='+@@callbackuri
+    
     redirect_to req
     
   end
