@@ -41,9 +41,11 @@ CTX.verify_mode = OpenSSL::SSL::VERIFY_NONE
         userId = data["id"]
         
         puts("アクセスゲストにロック権限を追加")
+        deviceId = aouthctr.getDeviceId
+        
         postbody2 = {
           "attributes": {
-            "accessible_id": "09ca0c78-b289-408a-95e1-202de97be912",
+            "accessible_id": deviceId,
             "accessible_type": "lock",
           }
         }
